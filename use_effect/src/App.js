@@ -20,7 +20,10 @@ function App() {
      <button className="btn btn-lg btn-info m-2" onClick={()=>{setResType("users")}}>Users</button>
      </div>
      <div className="col-12 my-4">
+     <h3 className="text-info m-3">windwo width</h3>
      <h3 className="text-light m-3">{resType}</h3>
+     <hr className="text-info m-3"/>
+     <hr className="text-info m-3"/>
      <p className="text-light">
        {
          items.map(item => {
