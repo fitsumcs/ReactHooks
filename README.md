@@ -2,4 +2,7 @@
 
 This project was bootstrapped with create-ract-app, showing all react hooks 
 
+* useState
+* useEffect
+
 
