@@ -11,7 +11,7 @@ function App() {
      <button className="btn btn-lg btn-info m-2" onClick={()=>{setResType("comments")}}>Comments</button>
      <button className="btn btn-lg btn-info m-2" onClick={()=>{setResType("users")}}>Users</button>
      </div>
-     <div className="col-4">
+     <div className="col-4 my-4">
      <h3 className="text-light m-3">{resType}</h3>
      </div>
     </div>
