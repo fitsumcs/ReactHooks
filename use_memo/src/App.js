@@ -5,6 +5,18 @@ function App() {
     const [number, setNumber] = useState(0)
     const [dark, setDark] = useState(false)
 
+    const sqrtNum = longProcess(number)
+    const theme = {
+      backgroundColor : dark ? "black" : "white",
+      color : dark ? "white" : "black"
+    }
+
+    function  longProcess(num){
+      // imitate long proccess
+      for (let index = 0; index < 1000000; index++) {}
+      return num * num;
+    }
+
   return (
     <div className="container mt-5">
       <div className="row bg-dark">
@@ -15,9 +27,9 @@ function App() {
        <button className="btn btn-lg btn-info m-3" onClick={()=>{setDark(prev => !prev)}}>Change Theme</button>
        </div>   
       </div>
-      <div className="row">
+      <div className="row mt-3">
       <div className="col-12">
-       <h3 className="m-3">{number}</h3>
+       <h3 className="p-4"  style={theme}>{sqrtNum}</h3>
        </div>
       </div>
     </div>
