@@ -1,11 +1,11 @@
-import {useState} from 'react'
+import {useState, useMemo} from 'react'
 
 function App() {
 
     const [number, setNumber] = useState(0)
     const [dark, setDark] = useState(false)
 
-    const sqrtNum = longProcess(number)
+    const sqrtNum = useMemo( ()=> { return longProcess(number)}, [number])
     const theme = {
       backgroundColor : dark ? "black" : "white",
       color : dark ? "white" : "black"
@@ -13,7 +13,7 @@ function App() {
 
     function  longProcess(num){
       // imitate long proccess
-      for (let index = 0; index < 1000000; index++) {}
+      for (let index = 0; index < 2000000000; index++) {}
       return num * num;
     }
 
