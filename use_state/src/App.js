@@ -28,11 +28,7 @@ function App() {
        <div className="col-4">
        <button className="btn btn-lg btn-info px-5 m-3" onClick={increment}>+</button>
        </div>
-       
       </div>
-    
-     
-     
     </div>
   );
 }
